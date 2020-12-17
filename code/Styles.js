@@ -20,8 +20,9 @@ const style = StyleSheet.create({
     textHeaderName: {
         fontSize: 25,
         marginLeft: 15,
-        marginTop: 25,
-        fontWeight: 'bold'
+        marginTop: 40,
+        fontWeight: 'bold',
+        color: '#323232'
     },
     textProfileName: {
         fontSize: 25,
@@ -137,9 +138,10 @@ const style = StyleSheet.create({
     },
     headerDashboard : {
         width : '100%',
-        height: '10%',
+        height: '18%',
         flexDirection: 'column',
-        backgroundColor: '#fff'
+        backgroundColor: '#FADC9C',
+        borderRadius: 1
     },
     headerProfil:{
         width : '100%',
@@ -197,9 +199,10 @@ const style = StyleSheet.create({
         flexDirection: 'column',
         width: "90%",
         alignItems:'flex-start',
-        borderWidth: 2,
-        borderRadius: 20,
-        marginTop: 10
+        borderWidth: 1,
+        borderRadius: 15,
+        marginTop: 10,
+        marginBottom: 3
     },
     InputEmail: {
         borderColor: 'black', 
@@ -296,7 +299,16 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    
+    tittleacara: {
+        color: '#000000', 
+        fontSize: 15, 
+        marginLeft:2, 
+        marginTop: 5,
+    },
+    layanan: {
+        paddingLeft:30,
+        paddingTop:10
+    }
 })
 
 export default style;

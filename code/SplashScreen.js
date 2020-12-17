@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import {Text, View, Image, TouchableOpacity} from 'react-native';
+import {View, Image, TouchableOpacity} from 'react-native';
 import styles from './Styles';
 
 const SplashScreen = ({ navigation }) => {
+
     useEffect(() => {
         setTimeout( () => {
             navigation.replace('LoginScreen');

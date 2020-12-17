@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import {Image} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {DashboardScreen, ProfilScreen, ChatScreen, ListCompany} from './BottomScreen';
+import {DashboardScreen, ProfilScreen, ListCompany} from './BottomScreen';
 
 
 const Tab = createBottomTabNavigator();
 
-
-const ButtomTabBuKas = ()=>{  
+const ButtomTab = ()=>{  
     return (
         <Tab.Navigator 
         tabBarOptions={{
@@ -41,19 +40,6 @@ const ButtomTabBuKas = ()=>{
               }}
               />   
           <Tab.Screen 
-            name="ChatScreen" 
-            component={ChatScreen}
-            options={{
-              tabBarIcon: ({size}) => (
-                <Image
-                source={require('../asset/chat.png')}
-                  style={{
-                    width: size,
-                    height: size,
-                  }}/>),
-              }}
-              />
-          <Tab.Screen 
             name="Account" 
             component={ProfilScreen}
             options={{
@@ -69,5 +55,5 @@ const ButtomTabBuKas = ()=>{
         </Tab.Navigator>
     );
   }
-    
-export default ButtomTabBuKas;
+
+export default ButtomTab;

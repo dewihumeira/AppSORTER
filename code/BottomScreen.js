@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {Text, View,FlatList,SafeAreaView,Image, ScrollView, TextInput,Alert, LogBox} from 'react-native';
+import {Text, View,FlatList,SafeAreaView,Image, ScrollView, Alert, LogBox} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from './Styles';
 import { TouchableHighlight } from 'react-native-gesture-handler';
-import DropDownPicker from 'react-native-dropdown-picker';
+
 
 const DATAEVENT = [
   {
@@ -44,7 +44,7 @@ const DATAEVENT = [
   },
   {
     id: '7',
-    title: 'POORSENI',
+    title: 'SENI',
     email: 'xxxxx@gmail.com',
     nomor: '+6281324116798',
   },
@@ -56,7 +56,7 @@ const DATAEVENT = [
   },
   {
     id: '9',
-    title: 'ULTAH SEKOLAH',
+    title: 'KONSER',
     email: 'xxxxx@gmail.com',
     nomor: '+6281324116798',
   },
@@ -121,13 +121,12 @@ const DATACOMPANY = [
 const Item = ({id, title, email, nomor}) => {
   const navigation = useNavigation();
   return(  
-  <View style={{flexDirection: 'column', justifyContent: 'space-between', alignItems:'center'}}>
+  <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems:'center', flexWrap: 'wrap'}}>
     <Image 
       style={{margin:10, width: 50, height:50 }} 
       source={require('../asset/acara.png')}/>
     <View style={{flexDirection: 'column'}}>
-      <Text style={{fontWeight: 'bold', fontSize: 18}}>{id}</Text>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.tittleacara}>{title}</Text>
       <View style={styles.statusbukas}>
         <Text 
           style={{color: '#000000', fontSize: 15, marginLeft:35, marginTop: 5 }}
@@ -135,13 +134,12 @@ const Item = ({id, title, email, nomor}) => {
           >View</Text>
         </View>
     </View>
-    <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems:'center'}}></View>
+    <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems:'center', }}></View>
     <Image 
       style={{margin:10, width: 50, height:50 }} 
       source={require('../asset/acara.png')}/>
     <View style={{flexDirection: 'column'}}>
-      <Text style={{fontWeight: 'bold', fontSize: 18}}>{id}</Text>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.tittleacara}>{title}</Text>
       <View style={styles.statusbukas}>
         <Text 
           style={{color: '#000000', fontSize: 15, marginLeft:35, marginTop: 5 }}
@@ -162,13 +160,15 @@ const DashboardScreen = () => {
         <View style={{flexDirection: 'row'}}>
           <Text style={styles.textHeaderName}>{'Dashboard Event'}</Text>
           <View style={{width: '50%', flexDirection: 'row-reverse'}}>
+          <Image style={{marginTop:48, marginRight:50}}
+          source={require('../asset/listoption.png')}>
+          </Image>
           </View>          
         </View>        
         <View style={{flexDirection: 'row', width: '100%',marginLeft: 15, marginTop: 10}}>
           <View style={{width: '100%', marginLeft: 10}}>
           </View>
           <View style={{width: '100%', marginLeft: 10}}>
-
           </View>
         </View>
       </View>
@@ -262,15 +262,9 @@ const ListCompany = ({title, email, nomor}) =>{
   }
 
 
-const ChatScreen = () => {
-  return(
-    <View>
-      <Text>Chat Screen</Text>
-    </View>
-  )
-}
+const ProfilScreen = ()=>{ 
+  const navigation = useNavigation();
 
-const ProfilScreen = ()=>{
     return (
       <View style={styles.containerDashboard}>
         <View style={styles.headerProfil}></View>
@@ -279,11 +273,12 @@ const ProfilScreen = ()=>{
             style={{marginTop: 10}} 
             source={require('../asset/profileuser.png')}/>
           <View style={{backgroundColor: '#01C5C4', marginTop: 20,marginBottom: 10, justifyContent: 'center', padding: 10, borderRadius: 10}}>
-            <TouchableHighlight underlayColor="#01C5C4" onPress={()=> Alert.alert('Ubah Foto')}>
+            <TouchableHighlight underlayColor="#01C5C4" onPress={()=> navigation.navigate('EditProfileHunter')}>
               <Text style={styles.submitButton}>Edit Profile</Text>
             </TouchableHighlight>
-            
           </View>
+
+
           <View style={styles.profile}>
                 <Text style={{marginBottom: 5, color:'grey', marginLeft: 10}}>username</Text>
                 <Text style={{color:'black', marginLeft: 10}}>Dewi</Text>
@@ -304,21 +299,19 @@ const ProfilScreen = ()=>{
                 <Text style={{marginBottom: 5, color:'grey', marginLeft: 10}}>Email</Text>
                 <Text style={{color:'black', marginLeft: 10}}>dew@gmail.com</Text>
             </View>
-            <View style={{backgroundColor: '#C4C4C4', marginTop: 5, justifyContent: 'center', padding: 10, borderRadius: 40, marginLeft:300}}>
+            <View style={{backgroundColor: '#C4C4C4', marginTop: 3, justifyContent: 'center', padding: 10, borderRadius: 40, marginLeft:300}}>
             <Image 
             style={{marginTop: 1}} 
             source={require('../asset/new.png')}/>
-            <TouchableHighlight underlayColor="#01C5C4" onPress={()=> Alert.alert('Ubah Foto')}>
+            <TouchableHighlight underlayColor="#01C5C4" onPress={()=> Alert.alert('New Event')}>
             </TouchableHighlight>
-            
+  
           </View>
         </View>
-          </View>  
+        </View>  
       
     );
   }
 
 
-
-
-  export{DashboardScreen,ChatScreen, ProfilScreen, ListCompany}
+  export{DashboardScreen, ProfilScreen, ListCompany}

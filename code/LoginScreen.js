@@ -81,7 +81,7 @@ const LoginScreen = () => {
             <View style={styles.buttonbottom}>
                 <TouchableHighlight 
                     underlayColor="#01C5C4"                    
-                    onPress = {()=> navigation.navigate('ButtomTabBuKas')}
+                    onPress = {()=> navigation.navigate('ButtomTab')}
                     > 
                     <Text 
                         style={styles.submitButton}>Login</Text>

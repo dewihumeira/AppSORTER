@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import {Text, View, Image, TextInput, TouchableHighlight, SafeAreaView, ScrollView, Alert, LogBox} from 'react-native';
+import {Text, View, Image, TextInput, Button, TouchableHighlight, SafeAreaView, ScrollView, Alert, LogBox} from 'react-native';
 import styles from './Styles';
 import { useNavigation } from '@react-navigation/native';
 
 
-const RegistrasiHunter = () => {
+const EditProfileHunter = () => {
     const navigation = useNavigation();
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
@@ -38,14 +38,13 @@ const RegistrasiHunter = () => {
     return(
         <View style={styles.container}>
             <View style={styles.containerLogin}>
-            <Text style={styles.textloginscreen}>Register Hunter</Text>
+            <Text style={styles.textloginscreen}>Edit Profile</Text>
             
             </View>
             <View style={styles.columnemaillogin}>
             <Text style={{marginBottom: 10, color:'grey'}}>School or University Name</Text>
                 <TextInput 
                 style={styles.InputEmail} 
-                placeholder = "ex: Telkom University"
                 placeholderTextColor = "#B8B8B8"
                 />
             </View>
@@ -53,7 +52,6 @@ const RegistrasiHunter = () => {
             <Text style={{marginBottom: 15, marginTop: 10, color:'grey'}}>Phone Number</Text>
                 <TextInput 
                 style={styles.InputEmail} 
-                placeholder = "ex: 08210099xxx"
                 placeholderTextColor = "#B8B8B8"
                 />
             </View>
@@ -61,7 +59,6 @@ const RegistrasiHunter = () => {
                 <Text style={{marginBottom: 10, marginTop: 10, color:'grey'}}>Email</Text>
                 <TextInput 
                 style={styles.InputEmail} 
-                placeholder = "ex: dewi@gmail.com"
                 placeholderTextColor = "#B8B8B8"
                 secureTextEntry={true} 
                 />
@@ -70,7 +67,6 @@ const RegistrasiHunter = () => {
                 <Text style={{marginBottom: 10, marginTop: 15, color:'grey'}}>Username</Text>
                 <TextInput 
                 style={styles.InputEmail} 
-                placeholder = "ex: dewiiii"
                 placeholderTextColor = "#B8B8B8"
                 secureTextEntry={true} 
                 />
@@ -86,13 +82,13 @@ const RegistrasiHunter = () => {
             <View style={styles.buttonbottomregist}>
                 <TouchableHighlight 
                     underlayColor="#01C5C4"
-                    onPress = {()=> navigation.navigate('LoginScreen')}
+                    onPress = {()=> navigation.navigate('ProfilScreen')}
                     >
-                    <Text style={styles.submitButton}>Register</Text>
+                    <Text style={styles.submitButton}>Save</Text>
                 </TouchableHighlight>
             </View>
         </View>
     );
 }
 
-export default RegistrasiHunter;
+export default EditProfileHunter;
