@@ -8,7 +8,8 @@ import RegistrasiCompany from "./RegistrasiCompany";
 import EditProfileHunter from "./EditProfileHunter";
 import RegistrasiHunter from "./RegistrasiHunter";
 import CompanyView from "./CompanyView";
-import ProfilScreen from "./ProfilScreen";
+import { ViewComponent } from "react-native";
+import ViewCompany from "./ViewCompany";
 
 const Stack = createStackNavigator();
 const StackLayout = () => {
@@ -39,11 +40,7 @@ const StackLayout = () => {
             component = {EditProfileHunter}
             options ={{headerShown: false}}
           />
-          <Stack.Screen 
-            name= "ProfilScreen"
-            component = {ProfilScreen}
-            options ={{headerShown: false}}
-          />
+
           <Stack.Screen 
             name= "RegistrasiHunter"
             component = {RegistrasiHunter}
@@ -57,6 +54,11 @@ const StackLayout = () => {
           <Stack.Screen 
             name= "CompanyView"
             component = {CompanyView}
+            options ={{headerShown: false}}
+          />
+          <Stack.Screen 
+            name= "ViewCompany"
+            component = {ViewCompany}
             options ={{headerShown: false}}
           />
       </Stack.Navigator>

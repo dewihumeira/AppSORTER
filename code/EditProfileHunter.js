@@ -75,14 +75,13 @@ const EditProfileHunter = () => {
                 <Text style={{marginBottom: 10, marginTop: 15, color:'grey'}}>Password</Text>
                 <TextInput 
                 style={styles.InputEmail} 
-                placeholder = "***********" 
                 placeholderTextColor = "#B8B8B8"
                 />
             </View>
             <View style={styles.buttonbottomregist}>
                 <TouchableHighlight 
-                    underlayColor="#01C5C4"
-                    onPress = {()=> navigation.navigate('ProfilScreen')}
+                    underlayColor="#FADC9C"
+                    onPress = {()=> navigation.goBack()}
                     >
                     <Text style={styles.submitButton}>Save</Text>
                 </TouchableHighlight>

@@ -197,7 +197,7 @@ const style = StyleSheet.create({
     },
     profile : {
         flexDirection: 'column',
-        width: "90%",
+        width: "100%",
         alignItems:'flex-start',
         borderWidth: 1,
         borderRadius: 15,
@@ -256,19 +256,7 @@ const style = StyleSheet.create({
         alignItems: 'center',
         marginTop: 50
     },
-    buttonbottomsavebuku: {
-        backgroundColor:'#01C5C4',
-        borderRadius:10,
-        borderColor: '#fff',
-        height: 40,
-        marginLeft: 15,
-        marginRight: 15,
-        width: "90%",
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 10,
-        marginTop: 30
-    },
+    
     buttonbottomcamera: {
         backgroundColor:'#03fca5',
         borderRadius:10,
@@ -285,7 +273,7 @@ const style = StyleSheet.create({
     submitButton:{
         color:'#000000',
         textAlign:'center',
-        fontSize: 15,
+        fontSize: 10,
     },
     submitFoto:{
         color:'#000000',

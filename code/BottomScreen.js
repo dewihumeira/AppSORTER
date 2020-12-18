@@ -3,7 +3,7 @@ import {Text, View,FlatList,SafeAreaView,Image, ScrollView, Alert, LogBox} from 
 import { useNavigation } from '@react-navigation/native';
 import styles from './Styles';
 import { TouchableHighlight } from 'react-native-gesture-handler';
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const DATAEVENT = [
   {
@@ -160,9 +160,6 @@ const DashboardScreen = () => {
         <View style={{flexDirection: 'row'}}>
           <Text style={styles.textHeaderName}>{'Dashboard Event'}</Text>
           <View style={{width: '50%', flexDirection: 'row-reverse'}}>
-          <Image style={{marginTop:48, marginRight:50}}
-          source={require('../asset/listoption.png')}>
-          </Image>
           </View>          
         </View>        
         <View style={{flexDirection: 'row', width: '100%',marginLeft: 15, marginTop: 10}}>
@@ -266,14 +263,20 @@ const ProfilScreen = ()=>{
   const navigation = useNavigation();
 
     return (
+      <ScrollView>
       <View style={styles.containerDashboard}>
-        <View style={styles.headerProfil}></View>
+        <View style={styles.headerProfil}>
+        <Image name={'hand-holding-usd'}
+          source={require('../asset/logout.png')}
+          style={{justifyContent:'center', marginLeft:320, marginTop:15}}
+        />
+        </View>
         <View style={{alignItems: 'center'}}>          
           <Image 
             style={{marginTop: 10}} 
             source={require('../asset/profileuser.png')}/>
-          <View style={{backgroundColor: '#01C5C4', marginTop: 20,marginBottom: 10, justifyContent: 'center', padding: 10, borderRadius: 10}}>
-            <TouchableHighlight underlayColor="#01C5C4" onPress={()=> navigation.navigate('EditProfileHunter')}>
+          <View style={{backgroundColor: '#FADC9C', marginTop: 20,marginBottom: 10, justifyContent: 'center', padding: 10, borderRadius: 10}}>
+            <TouchableHighlight underlayColor="#FADC9C" onPress={()=> navigation.navigate('EditProfileHunter')}>
               <Text style={styles.submitButton}>Edit Profile</Text>
             </TouchableHighlight>
           </View>
@@ -303,13 +306,14 @@ const ProfilScreen = ()=>{
             <Image 
             style={{marginTop: 1}} 
             source={require('../asset/new.png')}/>
-            <TouchableHighlight underlayColor="#01C5C4" onPress={()=> Alert.alert('New Event')}>
+            <TouchableHighlight underlayColor="#C4C4C4" onPress={()=> navigation.navigate('ViewCompany')}>
+            <Text style={styles.submitButton}>New Event</Text>
             </TouchableHighlight>
   
           </View>
         </View>
         </View>  
-      
+        </ScrollView>
     );
   }
 
