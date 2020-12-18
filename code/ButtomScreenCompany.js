@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import styles from './Styles';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {WebView} from 'react-native-webview'
+
 const DATAEVENT = [
   {
   id: '1',
@@ -130,7 +130,7 @@ const Item = ({id, title, email, nomor}) => {
       <View style={styles.statusbukas}>
         <Text 
           style={{color: '#000000', fontSize: 15, marginLeft:35, marginTop: 5 }}
-          onPress = {()=> navigation.navigate('HunterView')}
+          onPress = {()=> navigation.navigate('CompanyView')}
           >View</Text>
         </View>
     </View>
@@ -143,7 +143,7 @@ const Item = ({id, title, email, nomor}) => {
       <View style={styles.statusbukas}>
         <Text 
           style={{color: '#000000', fontSize: 15, marginLeft:35, marginTop: 5 }}
-          onPress = {()=> navigation.navigate('HunterView')}
+          onPress = {()=> navigation.navigate('CompanyView')}
           >View</Text>
         </View>
     </View>
@@ -259,86 +259,4 @@ const ListCompany = ({title, email, nomor}) =>{
   }
 
 
-const ProfilScreen = ()=>{ 
-  const navigation = useNavigation();
-
-    return (
-      <ScrollView>
-      <View style={styles.containerDashboard}>
-        <View style={styles.headerProfil}>
-        <Image
-          
-          style={{justifyContent:'center', marginLeft:320, marginTop:15}}/>
-          <TouchableHighlight underlayColor="#C4C4C4" onPress={()=> navigation.navigate('ViewCompany')}>
-            <Text style={styles.submitButton}>New Event</Text>
-            </TouchableHighlight>
-        </View>
-        <View style={{backgroundColor: '#fff', marginTop: 5, justifyContent: 'center', padding: 2, borderRadius:50, marginLeft:300}}>
-            <Image 
-            style={{marginTop: 1, marginLeft:20}} 
-            source={require('../asset/logout.png')}/>
-            <TouchableHighlight underlayColor="#C4C4C4" onPress={()=> navigation.navigate('LoginScreen')}>
-            <Text style={styles.submitButton}>Logout</Text>
-            </TouchableHighlight>
-          </View>
-        <View style={{alignItems: 'center'}}>          
-          <Image 
-            style={{marginTop: 10}} 
-            source={require('../asset/profileuser.png')}/>
-          <View style={{backgroundColor: '#FADC9C', marginTop: 20,marginBottom: 10, justifyContent: 'center', padding: 10, borderRadius: 10}}>
-            <TouchableHighlight underlayColor="#FADC9C" onPress={()=> navigation.navigate('EditProfileHunter')}>
-              <Text style={styles.submitButton}>Edit Profile</Text>
-            </TouchableHighlight>
-          </View>
-
-
-          <View style={styles.profile}>
-                <Text style={{marginBottom: 5, color:'grey', marginLeft: 10}}>username</Text>
-                <Text style={{color:'black', marginLeft: 10}}>Dewi</Text>
-            </View>
-            <View style={styles.profile}>
-                <Text style={{marginBottom: 5, color:'grey', marginLeft: 10}}>Phone Number</Text>
-                <Text style={{color:'black', marginLeft: 10}}>+6281233467</Text>
-            </View>
-            <View style={styles.profile}>
-                <Text style={{marginBottom: 5, color:'grey', marginLeft: 10}}>School or Universityr</Text>
-                <Text style={{color:'black', marginLeft: 10}}>Telkom University</Text>
-            </View>
-            <View style={styles.profile}>
-                <Text style={{marginBottom: 5, color:'grey', marginLeft: 10}}>Student ID</Text>
-                <Text style={{color:'black', marginLeft: 10}}>1101116263</Text>
-            </View>
-            <View style={styles.profile}>
-                <Text style={{marginBottom: 5, color:'grey', marginLeft: 10}}>Email</Text>
-                <Text style={{color:'black', marginLeft: 10}}>dew@gmail.com</Text>
-            </View>
-            <View style={{backgroundColor: '#C4C4C4', marginTop: 3, justifyContent: 'center', padding: 10, borderRadius: 40, marginLeft:300}}>
-            <Image 
-            style={{marginTop: 1}} 
-            source={require('../asset/new.png')}/>
-            <TouchableHighlight underlayColor="#C4C4C4" onPress={()=> navigation.navigate('ViewCompany')}>
-            <Text style={styles.submitButton}>New Event</Text>
-            </TouchableHighlight>
-  
-          </View>
-        </View>
-        </View>  
-        </ScrollView>
-    );
-  }
-
-  const WebViewScreen = ()=> { 
-    const navigation = useNavigation();
-  
-      return (
-        <WebView
-        source={{ uri : 'https://forms.gle/eLhXAmLoGd8RU3SY7'}}
-        startInLoadingState
-        />
-      )
-  }
-        
-
-
-
-  export{DashboardScreen, ProfilScreen, ListCompany, WebViewScreen}
+  export{DashboardScreen, ListCompany}

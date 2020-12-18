@@ -5,12 +5,12 @@ import { useNavigation } from '@react-navigation/native';
 
 
 const RegistrasiCompany = () => {
-    const navigation = useNavigation();
-    const [username, setUsername] = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const [email, setEmail] = React.useState('');
-    // const signUp = () => {
-    //     auth()
+  //  const navigation = useNavigation();
+ //   const [username, setUsername] = React.useState('');
+//    const [password, setPassword] = React.useState('');
+//    const [email, setEmail] = React.useState('');
+//     const signUp = () => {
+//         auth()
     //     .createUserWithEmailAndPassword(state.emailaddress, state.passwordaddress)
     //     .then(() => {
     //       Alert.alert('Berhasil Membuat Akun')

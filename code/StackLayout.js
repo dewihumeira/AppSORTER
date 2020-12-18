@@ -10,6 +10,10 @@ import RegistrasiHunter from "./RegistrasiHunter";
 import CompanyView from "./CompanyView";
 import { ViewComponent } from "react-native";
 import ViewCompany from "./ViewCompany";
+import WebView from "react-native-webview";
+import ButtomTabCompany from './ButtomTabCompany';
+import HunterView from "./HunterView";
+
 
 const Stack = createStackNavigator();
 const StackLayout = () => {
@@ -52,6 +56,11 @@ const StackLayout = () => {
             options ={{headerShown: false}}
           />
           <Stack.Screen 
+            name= "ButtomTabCompany"
+            component = {ButtomTabCompany}
+            options ={{headerShown: false}}
+          />
+          <Stack.Screen 
             name= "CompanyView"
             component = {CompanyView}
             options ={{headerShown: false}}
@@ -59,6 +68,16 @@ const StackLayout = () => {
           <Stack.Screen 
             name= "ViewCompany"
             component = {ViewCompany}
+            options ={{headerShown: false}}
+          />
+           <Stack.Screen 
+            name= "WebViewScreen"
+            component = {WebView}
+            options ={{headerShown: false}}
+          />
+          <Stack.Screen 
+            name= "HunterView"
+            component = {HunterView}
             options ={{headerShown: false}}
           />
       </Stack.Navigator>

@@ -18,7 +18,7 @@ function ChooseRegistrasi({navigation}) {
            <View style={styles.buttonbottom}>
               <TouchableOpacity>
                 <TouchableHighlight underlayColor="#FADC9C">
-                    <Text onPress = {()=> navigation.replace('RegistrasiHunter')} style={styles.submitButton}>Hunter</Text>
+                    <Text onPress = {()=> navigation.replace('LoginScreen')} style={styles.submitButton}>Hunter</Text>
                 </TouchableHighlight>
               </TouchableOpacity>
             </View>
@@ -26,8 +26,8 @@ function ChooseRegistrasi({navigation}) {
             <View style={styles.buttonbottom}>
            
               <TouchableOpacity>
-                <TouchableHighlight underlayColor="#FADC9C">
-                    <Text onPress = {()=> navigation.replace('RegistrasiCompany')} style={styles.submitButton}>Company</Text>
+                <TouchableHighlight underlayColor="#FADC9C" onPress = {()=> navigation.navigate('ButtomTabCompany')}>
+                    <Text style={styles.submitButton}>Company</Text>
                 </TouchableHighlight>
               </TouchableOpacity>
             </View>

@@ -76,7 +76,7 @@ const LoginScreen = () => {
             <View style={styles.daftarlogin}>
             <Text>Don’t have an account?</Text>
             <Gap height={20}/>
-            <Text onPress = {()=> navigation.navigate('ChooseRegistrasi')} style={{color: '#F09E56', fontSize: 16}}>Register</Text>
+            <Text onPress = {()=> navigation.navigate('RegistrasiHunter')} style={{color: '#F09E56', fontSize: 16}}>Register</Text>
           
             </View>
         </View>

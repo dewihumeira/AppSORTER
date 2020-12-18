@@ -6,9 +6,9 @@ import { useNavigation } from '@react-navigation/native';
 
 const RegistrasiHunter = () => {
     const navigation = useNavigation();
-    const [username, setUsername] = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const [email, setEmail] = React.useState('');
+  //  const [username, setUsername] = React.useState('');
+//    const [password, setPassword] = React.useState('');
+   // const [email, setEmail] = React.useState('');
     // const signUp = () => {
     //     auth()
     //     .createUserWithEmailAndPassword(state.emailaddress, state.passwordaddress)
@@ -30,11 +30,11 @@ const RegistrasiHunter = () => {
     // const onAuthStateChanged= user =>{
     //     setUser(user);
     // }
-    React.useEffect(()=>{
-        LogBox.ignoreAllLogs();
+  //  React.useEffect(()=>{
+   //     LogBox.ignoreAllLogs();
         // const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
         // return subscriber;
-    },[])
+  //  },[])
     return(
         <View style={styles.container}>
             <View style={styles.containerLogin}>
@@ -85,7 +85,7 @@ const RegistrasiHunter = () => {
             </View>
             <View style={styles.buttonbottomregist}>
                 <TouchableHighlight 
-                    underlayColor="#01C5C4"
+                    underlayColor="#FADC9C"
                     onPress = {()=> navigation.navigate('LoginScreen')}
                     >
                     <Text style={styles.submitButton}>Register</Text>
