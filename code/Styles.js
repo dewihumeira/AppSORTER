@@ -197,12 +197,12 @@ const style = StyleSheet.create({
     },
     profile : {
         flexDirection: 'column',
-        width: "100%",
+        width: "90%",
         alignItems:'flex-start',
         borderWidth: 1,
         borderRadius: 15,
         marginTop: 10,
-        marginBottom: 3
+        marginBottom: 5
     },
     InputEmail: {
         borderColor: 'black', 
@@ -236,13 +236,14 @@ const style = StyleSheet.create({
         backgroundColor:'#FADC9C',
         borderRadius:10,
         borderColor: '#fff',
-        height: 50,
+        height: 40,
         marginLeft:30,
         marginRight: 30,
         width: "90%",
         justifyContent: 'center',
         position: 'absolute',
-        bottom:5,
+        bottom:1,
+        
     },
     buttonbottomregist: {
         backgroundColor:'#FADC9C',

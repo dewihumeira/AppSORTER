@@ -68,8 +68,9 @@ or:{
     color:'#000000',
     textAlign:'center',
     fontSize: 15,
-    marginLeft: 110,
-    justifyContent: 'center'
+    marginLeft:115,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   body:(width)=> ({
     paddingTop: width

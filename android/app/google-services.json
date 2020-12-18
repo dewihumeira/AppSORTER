@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "615648626439",
+    "project_id": "sorter-e4382",
+    "storage_bucket": "sorter-e4382.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615648626439:android:8a783be7e53f8305b727a2",
+        "android_client_info": {
+          "package_name": "com.projectakhirsorter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615648626439-48sme3d0s49jaorqa2am1hfqlr0iorhc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN3xHnAJT7YWPaeFBPiDGzG0wDCYiUdxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615648626439-48sme3d0s49jaorqa2am1hfqlr0iorhc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

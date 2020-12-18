@@ -124,7 +124,7 @@ const Item = ({id, title, email, nomor}) => {
   <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems:'center', flexWrap: 'wrap'}}>
     <Image 
       style={{margin:10, width: 50, height:50 }} 
-      source={require('../asset/acara.png')}/>
+      source={require('../asset/poster.png')}/>
     <View style={{flexDirection: 'column'}}>
       <Text style={styles.tittleacara}>{title}</Text>
       <View style={styles.statusbukas}>
@@ -137,7 +137,7 @@ const Item = ({id, title, email, nomor}) => {
     <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems:'center', }}></View>
     <Image 
       style={{margin:10, width: 50, height:50 }} 
-      source={require('../asset/acara.png')}/>
+      source={require('../asset/poster2.jpg')}/>
     <View style={{flexDirection: 'column'}}>
       <Text style={styles.tittleacara}>{title}</Text>
       <View style={styles.statusbukas}>

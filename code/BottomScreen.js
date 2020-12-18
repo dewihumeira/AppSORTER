@@ -124,7 +124,7 @@ const Item = ({id, title, email, nomor}) => {
   <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems:'center', flexWrap: 'wrap'}}>
     <Image 
       style={{margin:10, width: 50, height:50 }} 
-      source={require('../asset/acara.png')}/>
+      source={require('../asset/poster2.jpg')}/>
     <View style={{flexDirection: 'column'}}>
       <Text style={styles.tittleacara}>{title}</Text>
       <View style={styles.statusbukas}>
@@ -137,7 +137,7 @@ const Item = ({id, title, email, nomor}) => {
     <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems:'center', }}></View>
     <Image 
       style={{margin:10, width: 50, height:50 }} 
-      source={require('../asset/acara.png')}/>
+      source={require('../asset/poster.png')}/>
     <View style={{flexDirection: 'column'}}>
       <Text style={styles.tittleacara}>{title}</Text>
       <View style={styles.statusbukas}>
@@ -301,7 +301,7 @@ const ProfilScreen = ()=>{
                 <Text style={{color:'black', marginLeft: 10}}>+6281233467</Text>
             </View>
             <View style={styles.profile}>
-                <Text style={{marginBottom: 5, color:'grey', marginLeft: 10}}>School or Universityr</Text>
+                <Text style={{marginBottom: 5, color:'grey', marginLeft: 10}}>School or University</Text>
                 <Text style={{color:'black', marginLeft: 10}}>Telkom University</Text>
             </View>
             <View style={styles.profile}>
@@ -316,7 +316,7 @@ const ProfilScreen = ()=>{
             <Image 
             style={{marginTop: 1}} 
             source={require('../asset/new.png')}/>
-            <TouchableHighlight underlayColor="#C4C4C4" onPress={()=> navigation.navigate('ViewCompany')}>
+            <TouchableHighlight underlayColor="#C4C4C4" onPress={()=> navigation.navigate('EventNew')}>
             <Text style={styles.submitButton}>New Event</Text>
             </TouchableHighlight>
   

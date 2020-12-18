@@ -13,6 +13,7 @@ import ViewCompany from "./ViewCompany";
 import WebView from "react-native-webview";
 import ButtomTabCompany from './ButtomTabCompany';
 import HunterView from "./HunterView";
+import EventNew from "./EventNew";
 
 
 const Stack = createStackNavigator();
@@ -78,6 +79,11 @@ const StackLayout = () => {
           <Stack.Screen 
             name= "HunterView"
             component = {HunterView}
+            options ={{headerShown: false}}
+          />
+          <Stack.Screen 
+            name= "EventNew"
+            component = {EventNew}
             options ={{headerShown: false}}
           />
       </Stack.Navigator>
